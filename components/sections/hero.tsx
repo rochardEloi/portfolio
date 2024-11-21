@@ -4,6 +4,10 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { TextShine } from "../beast/shinny";
+import TextWriter from "../beast/textwriter";
+import { WordPullUp } from "../magicui/wordpullup";
+
 
 export default function Hero() {
   return (
@@ -17,24 +21,32 @@ export default function Hero() {
       <div className="container mx-auto px-4 relative">
         <div className="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-16">
           <div className="flex-1 text-center md:text-left">
+
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-4xl md:text-6xl font-bold mb-2"
             >
-              Rochard Eliamar Eloi
+              <TextShine text="Rochard Eliamar Eloi" shineColor="white" duration={5} />
+
             </motion.h1>
-            
+
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
               className="text-3xl md:text-4xl font-bold mb-6 text-primary/80"
             >
-              Mid-senior Full Stack Developer
+
+              <TextWriter
+                text=" Mid-senior Full Stack Developer."
+                className="text-3xl md:text-4xl"
+                delay={0.05}
+
+              />
             </motion.h2>
-            
+
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -42,8 +54,9 @@ export default function Hero() {
               className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl md:max-w-xl"
             >
               Crafting exceptional digital experiences with React, React Native, Node.js, and Next.js
+              
             </motion.p>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -73,7 +86,7 @@ export default function Hero() {
                 <Mail size={24} />
               </Link>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -96,7 +109,7 @@ export default function Hero() {
           >
             {/* Replace with your photo URL */}
             {/* <div className="w-full h-full bg-muted flex items-center justify-center text-muted-foreground"> */}
-              <Image src={"https://proadvent-haiti.org/images/rochard2.jpg"} alt={"Eloi Rochard Eliamar"} width={100} height={100} className="w-auto h-auto"/>
+            <Image src={"https://proadvent-haiti.org/images/rochard2.jpg"} alt={"Eloi Rochard Eliamar"} width={100} height={100} className="w-auto h-auto" />
             {/* </div> */}
           </motion.div>
         </div>
